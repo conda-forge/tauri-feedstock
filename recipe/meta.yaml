@@ -1,5 +1,5 @@
 {% set name = "tauri" %}
-{% set version = "1.6.2" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tauri-apps/tauri/archive/tauri-cli-v{{ version }}.tar.gz
-  sha256: 7d6e88f2ac53a81eb7ee8a33c9523a6eb70c2a6503f969c19dd4fc09b1dc6401
+  sha256: d58ce5262f79d281266fa24684dfc39dde5b18e549a4ee58756c6224a9087888
 
 build:
   number: 0
