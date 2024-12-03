@@ -1,12 +1,12 @@
-{% set name = "tauri" %}
-{% set version = "2.1.0" %}
+context:
+  version: 2.1.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: tauri
+  version: ${{ version }}
 
 source:
-  url: https://github.com/tauri-apps/tauri/archive/tauri-cli-v{{ version }}.tar.gz
+  url: https://github.com/tauri-apps/tauri/archive/tauri-cli-v${{ version }}.tar.gz
   sha256: d58ce5262f79d281266fa24684dfc39dde5b18e549a4ee58756c6224a9087888
 
 build:
@@ -14,24 +14,24 @@ build:
 
 requirements:
   build:
-    - {{ compiler('rust') }}
-    - {{ compiler('c') }}
-    - {{ stdlib('c') }}
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
     - cargo-bundle-licenses
 
-test:
-  commands:
-    - cargo-tauri --help
+tests:
+  - script:
+      - cargo-tauri --help
 
 about:
-  home: https://github.com/tauri-apps/tauri
   license: Apache-2.0 AND MIT
   license_file:
     - LICENSE_MIT
     - LICENSE_APACHE-2.0
     - THIRDPARTY.yml
   summary: Build smaller, faster, and more secure desktop applications with a web frontend.
-  dev_url: https://github.com/tauri-apps/tauri
+  homepage: https://github.com/tauri-apps/tauri
+  repository: https://github.com/tauri-apps/tauri
 
 extra:
   recipe-maintainers:
