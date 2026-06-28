@@ -1,5 +1,5 @@
 context:
-  version: "2.11.3"
+  version: "2.11.4"
 
 package:
   name: tauri
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tauri-apps/tauri/archive/tauri-cli-v${{ version }}.tar.gz
-  sha256: 503c31da8c49c1fe38a9bb6985e0527119a802a8f51588e0fa1c58643f9ec2b1
+  sha256: 50583e6747a1eb017b5eeeb7a3b0567b17fff48ea9f20c9752c45aff3302dc96
 
 build:
   number: 0
